@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     return render action: 'new' unless @user.save
       redirect_to root_path, notice: 'Created user'
     end
-  end
 
   private
   def user_params
@@ -17,4 +16,4 @@ class UsersController < ApplicationController
     permit(:username,
     :password, :password_confirmation)
   end
-end 
+end
